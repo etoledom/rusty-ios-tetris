@@ -52,7 +52,6 @@ class TetrisBoardView: UIView {
         backgroundRect.fill()
         backgroundRect.stroke()
 
-
         for block in blocks {
             draw(block)
         }

@@ -10,3 +10,4 @@ crate-type = ["staticlib", "cdylib"]
 
 [dependencies]
 tetris_core = "0.1.0"
+rand = "0.6.5"

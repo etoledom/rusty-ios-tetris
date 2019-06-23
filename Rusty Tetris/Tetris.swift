@@ -1,5 +1,4 @@
 import UIKit
-import CoreGraphics
 
 class Tetris {
     enum Action {

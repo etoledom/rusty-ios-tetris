@@ -1,3 +1,4 @@
+use rand::Rng;
 use std::os::raw::*;
 use tetris_core::*;
 
@@ -6,8 +7,9 @@ type size_t = usize;
 
 struct Rand;
 impl Randomizer for Rand {
-    fn random_between(&self, _first: i32, _last: i32) -> i32 {
-        return 2;
+    fn random_between(&self, lower: i32, higher: i32) -> i32 {
+        let mut rng = rand::thread_rng();
+        return rng.gen_range(lower, higher);
     }
 }
 
