@@ -70,10 +70,10 @@
 			isa = PBXGroup;
 			children = (
 				7E6601BC22B6B496009AA34D /* Tetris.swift */,
+				7E30D3A022BF4AD50018852B /* TetrisBoardView.swift */,
+				7E6601A222B68435009AA34D /* ViewController.swift */,
 				7E30D3A322BFD2BD0018852B /* ControlsViewController.swift */,
 				7E6601A022B68435009AA34D /* AppDelegate.swift */,
-				7E6601A222B68435009AA34D /* ViewController.swift */,
-				7E30D3A022BF4AD50018852B /* TetrisBoardView.swift */,
 				7E6601A422B68435009AA34D /* Main.storyboard */,
 				7E6601A722B68436009AA34D /* Assets.xcassets */,
 				7E6601A922B68436009AA34D /* LaunchScreen.storyboard */,

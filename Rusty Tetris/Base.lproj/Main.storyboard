@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -22,11 +22,11 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FyH-z9-fPd" customClass="TetrisBoardView" customModule="Rusty_Tetris" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="681.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="681.66666666666663"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RzJ-AV-LPQ">
-                                        <rect key="frame" x="0.0" y="681.5" width="414" height="136.5"/>
+                                        <rect key="frame" x="0.0" y="681.66666666666663" width="414" height="136.33333333333337"/>
                                         <connections>
                                             <segue destination="Jvn-0l-yJO" kind="embed" id="w8J-OS-tAw"/>
                                         </connections>
@@ -52,23 +52,28 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="314" y="19"/>
         </scene>
         <!--Controls View Controller-->
         <scene sceneID="VFH-Mo-Rdt">
             <objects>
                 <viewController id="Jvn-0l-yJO" customClass="ControlsViewController" customModule="Rusty_Tetris" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="shV-Ga-1gG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="136"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="136.33333333333337"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3QE-ry-9hD">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="136"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="136.33333333333334"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4J5-6e-gO4">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="45.333333333333336"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="X04-3B-dRI">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="68"/>
+                                        <rect key="frame" x="0.0" y="45.333333333333343" width="414" height="45.666666666666657"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7LB-fl-Zja">
-                                                <rect key="frame" x="0.0" y="0.0" width="138" height="68"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="138" height="45.666666666666664"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="←"/>
                                                 <connections>
@@ -76,7 +81,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDn-Ly-Fho">
-                                                <rect key="frame" x="138" y="0.0" width="138" height="68"/>
+                                                <rect key="frame" x="138" y="0.0" width="138" height="45.666666666666664"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="↓"/>
                                                 <connections>
@@ -84,7 +89,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v89-dD-9GV">
-                                                <rect key="frame" x="276" y="0.0" width="138" height="68"/>
+                                                <rect key="frame" x="276" y="0.0" width="138" height="45.666666666666664"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="→"/>
                                                 <connections>
@@ -94,7 +99,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHb-tr-ct3">
-                                        <rect key="frame" x="0.0" y="68" width="414" height="68"/>
+                                        <rect key="frame" x="0.0" y="91" width="414" height="45.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="↻"/>
                                         <connections>
@@ -115,7 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="70C-1V-qwm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1497" y="19"/>
+            <point key="canvasLocation" x="1134" y="20"/>
         </scene>
     </scenes>
 </document>

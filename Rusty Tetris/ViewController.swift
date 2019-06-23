@@ -2,14 +2,13 @@ import UIKit
 
 class ViewController: UIViewController {
     var game: Tetris = Tetris(height: 20, width: 10)
-    var gameBlocks: [TetrisBlock]?
     var controls: ControlsViewController? {
         didSet {
             guard let controls = controls else {
                 return
             }
-            controls.onActionButtonPressed = { (action) in
-                self.game.perform(action)
+            controls.onActionButtonPressed = { [weak self] (action) in
+                self?.game.perform(action)
             }
         }
     }
@@ -19,6 +18,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         startLoop()
+    }
+
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        DispatchQueue.main.async {
+            self.boardView.boardSize = self.game.size
+        }
+
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

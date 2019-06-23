@@ -6,10 +6,12 @@ class Tetris {
         case left, right, down, rotation
     }
 
+    let size: CGSize
     private let gamePtr: UnsafeMutableRawPointer
 
     init(height: UInt, width: UInt) {
         gamePtr = tetris_game_create(height, width)
+        size = CGSize(width: Int(width), height: Int(height))
     }
 
     deinit {
