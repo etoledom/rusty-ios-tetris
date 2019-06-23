@@ -2,8 +2,8 @@ import UIKit
 import CoreGraphics
 
 class Tetris {
-    enum Direction {
-        case left, right, down
+    enum Action {
+        case left, right, down, rotation
     }
 
     private let gamePtr: UnsafeMutableRawPointer
@@ -24,14 +24,16 @@ class Tetris {
         tetris_update(gamePtr, deltaTime)
     }
 
-    func move(_ direction: Direction) {
-        switch direction {
+    func perform(_ action: Action) {
+        switch action {
         case .left:
             tetris_move_left(gamePtr)
         case .right:
             tetris_move_right(gamePtr)
         case .down:
             tetris_move_down(gamePtr)
+        case .rotation:
+            tetris_rotate(gamePtr)
         }
     }
 
@@ -51,10 +53,6 @@ class Tetris {
         }
 
         return Array(buffer)
-    }
-
-    func rotate() {
-        tetris_rotate(gamePtr)
     }
 }
 
