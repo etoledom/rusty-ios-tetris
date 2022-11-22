@@ -52,25 +52,25 @@ pub extern "C" fn tetris_update(game_ptr: *mut c_void, delta_time: f64) {
 #[no_mangle]
 pub extern "C" fn tetris_rotate(game_ptr: *mut c_void) {
     let game = get_game_from_ptr(game_ptr);
-    game.rotate();
+    game.perform(Action::Rotate);
 }
 
 #[no_mangle]
 pub extern "C" fn tetris_move_left(game_ptr: *mut c_void) {
     let game = get_game_from_ptr(game_ptr);
-    game.move_left();
+    game.perform(Action::MoveLeft);
 }
 
 #[no_mangle]
 pub extern "C" fn tetris_move_right(game_ptr: *mut c_void) {
     let game = get_game_from_ptr(game_ptr);
-    game.move_right();
+    game.perform(Action::MoveRight);
 }
 
 #[no_mangle]
 pub extern "C" fn tetris_move_down(game_ptr: *mut c_void) {
     let game = get_game_from_ptr(game_ptr);
-    game.move_down();
+    game.perform(Action::MoveDown);
 }
 
 fn board_blocks_from(game: &Game) -> Vec<TetrisBlock> {

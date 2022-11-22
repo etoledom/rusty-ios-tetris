@@ -28,6 +28,7 @@ class ViewController: UIViewController {
 
             self.game.update(deltaTime: timer.timeInterval);
             let blocks = self.game.draw()
+            self.boardView.boardSize = self.game.size
             self.boardView.refresh(with: blocks)
         }
     }

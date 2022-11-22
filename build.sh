@@ -3,7 +3,8 @@
 DESTINATION=../Bridge
 
 cd $(dirname $0)/tetris_core
-cargo lipo --release
+# Set up for M1 macs. Change target for intel processor.
+cargo lipo --targets aarch64-apple-ios-sim --release
 rm -rf $DESTINATION/Headers
 mkdir $DESTINATION/Headers
 rm -rf $DESTINATION/Libraries
